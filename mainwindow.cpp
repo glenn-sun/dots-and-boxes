@@ -330,15 +330,16 @@ void MainWindow::handleButton() {
 }
 
 void MainWindow::changeToMenu() {
+    persistGame = false;
     stackedLayout->setCurrentIndex(0);
 }
 
 void MainWindow::changeToBoard() {
-    if (firstGame){
+    if (persistGame){
         stackedLayout->setCurrentIndex(1);
-        firstGame = false;
     } else {
         resetBoard();
+        persistGame = true;
         stackedLayout->setCurrentIndex(1);
     }
 }

@@ -29,7 +29,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    bool firstGame = true;
+    bool persistGame = true;
 
     vector<vector<QPushButton*>> buttons;
     vector<vector<int>> status;
